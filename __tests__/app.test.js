@@ -8,7 +8,12 @@ describe('oauth-lab routes', () => {
     return setup(pool);
   });
 
-  it('posts a tweet', async => {
-    
+  it('displaying loged in user', async () => {
+    const res = await request(app).get('/api/v1/auth/login');
+
+    expect(res.body).toEqual({
+      username: 'user1',
+      avatarUrl: 'avatar_url',
+    });
   });
 });
