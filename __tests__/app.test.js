@@ -8,7 +8,7 @@ describe('oauth-lab routes', () => {
     return setup(pool);
   });
 
-  it('displaying loged in user', async () => {
+  it('displaying logged in user', async () => {
     const res = await request(app).get('/api/v1/auth/login');
 
     expect(res.body).toEqual({
